@@ -35,40 +35,9 @@ public class App {
     	/*
     	 * Declaracion ed variables DAO
     	 */
-    	PersonaDao pDao = new PersonaDao();
     	FotoDao fDao = new FotoDao();
     	UsuarioDao uDao = new UsuarioDao();
     
-    	/*
-    	 * Crear la session de conexion a la base de datos
-    	 */
-		/*
-		 * StandardServiceRegistry ssr = new
-		 * StandardServiceRegistryBuilder().configure("hibernate.cfg.xml").build();
-		 * Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();
-		 * 
-		 * SessionFactory factory = meta.getSessionFactoryBuilder().build(); Session
-		 * session = factory.openSession(); Transaction t = session.beginTransaction();
-		 */
-		
-    	//Session session = HibernateConnectionUtils.getOpenSession();
-    	
-		/*
-		 * Crear o insertar una persona
-		 */
-
-		
-		//pDao.nuevoUsuario(u);
-		
-
-	
-		//System.out.println("Persona con id: " + p.getId());
-		//System.out.println(pDao.obtenerPersona(p.getId()));
-		
-		
-		//List<Persona> p1 = pDao.obtenerMultiplesPersonas();
-		//p1.forEach(System.out::println);
-		
 		
 		
 		/*
@@ -140,20 +109,7 @@ public class App {
 		System.out.println("Usuario actualizado: " + uDao.actualizarUsuario(u));
 		
 		
-		/*
-		 * Buscar una persona por id
-		 */
-//		Persona pEncontrada = session.find(Persona.class, id);
-//		System.out.printf("Persona encontrada con id: %s\n", id);
-//		System.out.println(pEncontrada);
 		
-		/*
-		 * Actualizar un objeto de tipo persona
-		 */
-//		p.setNombre("Persona pruena actualizada");
-//		session.update(p);
-//		System.out.println("Persona ha sido actualizada\n");
-//		System.out.println(p);
 		
 		/*
 		 * Eliminar una persona
@@ -163,24 +119,8 @@ public class App {
 //		pEncontrada = session.find(Persona.class, id);
 //		System.out.println(pEncontrada);
 		
-		/*
-		 * Obtener persona por id
-		 */
-		//Long idBusqueda = 2L;
-		//pEncontrada = session.get(Persona.class, idBusqueda);
-		//System.out.println("Obtener una persona por id: " + idBusqueda);
-		//System.out.println(pEncontrada);
 		
-		/*
-		 * Obtener todos los registros
-		 */
-//		CriteriaBuilder builder = session.getCriteriaBuilder();
-//		CriteriaQuery<Persona> criteria = builder.createQuery(Persona.class);
-//		criteria.from(Persona.class);
-//		List<Persona> personas = session.createQuery(criteria).getResultList();
-//		System.out.println("Imprimiendo todos los registros de la tabla Persona:");
-//		personas.forEach(System.out::println);
-		
+
 		/*
 		 * Opcion #2
 		 * Obtener todos lo registros:
@@ -203,24 +143,7 @@ public class App {
 //			System.out.println("No existe registro con valor: " + idOp);
 //		}
 		
-		
-		/*
-		 *  1. Encapsulamos nuestra conexion
-		 *  2. DTO persona
-		 *  3. Creanos un dao
-		 * 	4
-		 * 
-		 * 
-		 */
 
 		
-		
-//		t.commit();  
-//		
-//		factory.close();
-//		session.close();
-		
-		
-	//HibernateConnectionUtils.close();
     }
 }
