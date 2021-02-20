@@ -21,6 +21,8 @@ import com.hn.aduanas.proyectomaven.connection.HibernateConnectionUtils;
 import com.hn.aduanas.proyectomaven.dao.FotoDao;
 import com.hn.aduanas.proyectomaven.dao.PersonaDao;
 import com.hn.aduanas.proyectomaven.dao.UsuarioDao;
+import com.hn.aduanas.proyectomaven.dto.Curso;
+import com.hn.aduanas.proyectomaven.dto.Estudiante;
 import com.hn.aduanas.proyectomaven.dto.Foto;
 import com.hn.aduanas.proyectomaven.dto.Persona;
 import com.hn.aduanas.proyectomaven.dto.Usuario;
@@ -58,6 +60,40 @@ public class App {
 //		  System.out.println(fDao.nuevaFoto(f1));
 		 
 		
+    	SessionFactory sessionFactory = HibernateConnectionUtils.getSessionFactory();
+    	Session session = sessionFactory.openSession();
+    	
+		
+    	Curso c = new Curso();
+    	c.setNombreCurso("Java");
+		  
+	  Curso c1 = new Curso(); 
+	  c1.setNombreCurso("Golang");
+	  
+	  Curso c3 = new Curso(); 
+	  c3.setNombreCurso("Typescript");
+	  
+	  
+	  Estudiante e = new Estudiante(); 
+	  e.setNombre("Andy");
+	  e.getCursos().add(c);
+	  e.getCursos().add(c1);
+	  
+	  
+	  Estudiante e1 = new Estudiante(); 
+	  e1.setNombre("Jorge");
+	  e1.getCursos().add(c);
+	  e1.getCursos().add(c1); 
+	  e1.getCursos().add(c3);
+		 
+    	
+    	session.save(e);
+    	
+    	session.save(e1);
+    	
+    	session.beginTransaction().commit();
+    	
+    	
 		/*
 		 * Actualizar una foto
 		 */

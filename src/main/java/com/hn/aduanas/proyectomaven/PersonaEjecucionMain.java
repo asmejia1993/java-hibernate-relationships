@@ -48,6 +48,8 @@ public class PersonaEjecucionMain {
 		System.out.println("Persona creada con usuario");
 		System.out.println(pDao.obtenerPersona(pResultado.getId()));
 		
+		
+		
 		/**
 		 * Por favor completar el metodo encontrar persona
 		 */

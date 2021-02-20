@@ -16,6 +16,7 @@
       <mapping class="com.hn.aduanas.proyectomaven.dto.Persona"/> 
       <mapping class="com.hn.aduanas.proyectomaven.dto.Foto"/>
       <mapping class="com.hn.aduanas.proyectomaven.dto.Usuario"/>
-      
+      <mapping class="com.hn.aduanas.proyectomaven.dto.Curso"/> 
+      <mapping class="com.hn.aduanas.proyectomaven.dto.Estudiante"/>
    </session-factory>
 </hibernate-configuration>
