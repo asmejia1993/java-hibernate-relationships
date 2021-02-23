@@ -55,4 +55,23 @@ public class FotoDao {
 	}
 	
 	
+	/**
+	 * Metodo para obtener una foto por id
+	 * @param id
+	 * @return Foto
+	 */
+	public Foto obtenerFoto(Long id) {
+		try {
+			session = HibernateConnectionUtils.getSessionFactory().openSession();
+			foto = session.get(Foto.class, id);
+			
+		} catch (Exception e) {
+			System.out.println("Hubo un error en el metodo obtenerFoto, contacte al administrador: " + e.getMessage());
+		} finally {
+			HibernateConnectionUtils.close(session);
+			
+		}
+		return foto;
+	}
+	
 }

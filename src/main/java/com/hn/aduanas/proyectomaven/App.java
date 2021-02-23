@@ -130,6 +130,10 @@ public class App {
 //		System.out.println("Persona creada con usuario");
 //		System.out.println(pDao.obtenerPersona(pResultado.getId()));
 		
+    	
+    	
+    	
+    	
 		
 		/*
 		 * Obtener un usuario
